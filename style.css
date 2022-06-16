@@ -1,0 +1,263 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1,p,span,input,button{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+img{
+    width: 25px;
+    height: 25px;
+}
+
+/*
+- Red: hsl(0, 100%, 74%) 
+- Green: hsl(154, 59%, 51%)
+- Blue: hsl(248, 32%, 49%)
+- Dark Blue: hsl(249, 10%, 26%) 
+- Grayish Blue: hsl(246, 25%, 77%)
+
+*/
+
+#main{
+    width: 100%;
+    height: 100vh;
+    background-color: hsl(0, 100%, 74%);
+    background-image: url('images/bg-intro-desktop.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    align-items: center;
+}
+
+.intro_register{
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 25px;
+    align-items: center;
+}
+
+.intro{
+    padding: 35px 55px;
+}
+
+.intro_heading{
+    padding-right: 55px;
+    color: hsl(0, 0%, 100%);
+    font-size: 2.3em;
+    font-weight: 700;
+}
+
+.intro_paragraph{
+    color: hsl(0, 0%, 100%);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 2;
+    margin-top: 25px;
+}
+
+.register{
+    padding: 0 45px;
+}
+
+.register_heading{
+    width: 100%;
+    padding: 13px 0;
+    margin-bottom: 25px;
+    box-shadow: 0 10px hsla(249, 10%, 26%, 0.189);
+    font-weight: 400;
+    text-align: center;
+    line-height: 1.8;
+    border-radius: 10px;
+    background-color:  hsl(248, 32%, 49%);
+}
+
+.register_heading p{
+    color: hsl(0, 0%, 100%);
+}
+
+.register_heading p span{
+    color: hsl(246, 25%, 77%);
+}
+
+.form_cover{
+    width: 100%;
+    padding-bottom: 35px;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 0 10px hsla(249, 10%, 26%, 0.189);
+    border-radius: 10px;
+}
+
+.form_cover form{
+    width: 100%;
+    padding: 25px 0;
+}
+
+.input_cover{
+    width: 100%;
+    margin: 15px auto;
+    position: relative;
+}
+
+.input_area{
+    width: 80%;
+    background-color: hsl(0, 0%, 100%);
+    border: 2px solid hsla(0, 6%, 93%, 0.8);
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+#input_field{
+    width: 90%;
+    color: hsl(249, 10%, 26%) ;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 0 15px 35px;
+    border: none;
+    
+}
+
+#input_field:focus{
+    outline: none;
+}
+
+.input_area input:focus .input_cover{
+    border: 2px solid hsl(249, 10%, 26%);
+    
+}
+
+.input_area{
+    display: flex;
+    align-items: center;
+}
+
+.form_btn{
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    padding: 15px 0;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    background-color: hsl(154, 59%, 51%);
+    color: hsl(0, 0%, 100%);
+    border: none;
+    box-shadow: 0 5px hsla(249, 10%, 26%, 0.468);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color ease-out 0.23s;
+}
+
+.form_btn:hover{
+    background-color: hsla(154, 59%, 51%, 0.701);
+}
+
+.form_submit{
+    display: none;
+}
+
+.terms_services{
+    color: hsl(246, 25%, 77%);
+    width: 80%;
+    padding: 0 35px;
+    margin: 0 auto;
+    font-size: 10px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.terms_link{
+    color: hsl(0, 100%, 74%);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* Active states: Errror classes */
+
+.error_text, .error_email{
+    width: 80%;
+    text-align: right;
+    margin: 10px auto;
+    color: hsl(0, 100%, 74%);
+    font-size: 12px;
+    font-weight: 500;
+    display: none;
+}
+
+.error_icon{
+    display: none;
+}
+
+.show_error{
+    display: block;
+}
+
+.border_error{
+   border: 2px solid hsl(0, 100%, 74%);
+}
+
+/* break points */
+
+@media screen and (max-width: 1024px){
+    .intro_register{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 912px){
+    
+    .intro_register{
+        width: 80%;
+        grid-template-columns: 1fr;
+    }
+
+    .intro{
+        padding: 35px 25px;
+        text-align: center;
+    }
+
+    .intro_heading{
+        padding-right: 15px;
+        font-size: 1.7em;
+        line-height: 1.4;
+    }
+    
+    .register_heading{
+        padding: 13px 45px;
+    }
+    
+    .register{
+        padding: 0 20px;
+    }
+
+    .input_cover{
+        width: 100%;
+    }
+
+    .form_btn{
+        display: block;
+        width: 85%;
+    }
+}
+
+
+@media screen and (max-width: 540px){
+
+    #main{
+        height: 150vh;
+        background-image: url('images/bg-intro-mobile.png');
+    }
+}
+
+@media screen and (max-width: 420px){
+
+    .intro_register{
+        width: 100%;
+    }
+}
