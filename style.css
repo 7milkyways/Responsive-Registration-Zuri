@@ -9,11 +9,6 @@ h1,p,span,input,button{
     font-size: 16px;
 }
 
-img{
-    width: 25px;
-    height: 25px;
-}
-
 /*
 - Red: hsl(0, 100%, 74%) 
 - Green: hsl(154, 59%, 51%)
@@ -191,6 +186,9 @@ img{
 }
 
 .error_icon{
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
     display: none;
 }
 
